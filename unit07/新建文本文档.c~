@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int ti1 (void)
+{
+	printf("1");
+	return 0;
+}
+
+int ti2 (void)
+{
+	printf("2");
+	return 0;
+}
+
+int main(void)
+{
+	ti1;
+	ti2;
+	return 0;
+}

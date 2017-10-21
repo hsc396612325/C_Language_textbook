@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct stud
+{
+	char name[30];
+	char sex;
+	int year;
+};
+struct stud qrade[100];
+int main(void)
+{
+	int m_num=0,f_num=0,total=0,i,n;
+	printf("你要输入多少个同学的信息：\n");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)//输入 
+	{
+		printf("请输入姓名：");
+		scanf("%s",qrade[i].name);
+		fflush(stdin);
+		printf("请输入性别：");
+		scanf("%c",&qrade[i].sex);
+		printf("请输入出生年份：");
+		scanf("%d",&qrade[i].year); 
+	}
+	for(i=0;i<n;i++)//统计 
+	{
+		if(qrade[i].year>=1997&&qrade[i].year<=2005)
+			total++;
+		if(qrade[i].sex=='M'&&qrade[i].sex=='m')
+			m_num++;
+		else
+			f_num++;
+	}
+	printf("%c\n",qrade[0].sex);
+	printf("男生人数：%d\n",m_num); //输出结果 
+	printf("女生人数：%d\n",f_num); 
+	printf("1997到2005年出生的人数:%d\n",total); 
+}
